@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Msg from "./Msg/Msg";
-import App from "./App/App";
-import Counter from "./Counter/Counter";
-import EatApple from "./EatApple/EatApple";
-
-
 import reportWebVitals from "./reportWebVitals";
+import App from "./App/App";
+import Msg from "./Msg/Msg";
+import Counter from "./Counter/Counter";
 import Animal from "./Animal/Animal";
 import HunterParent from "./HunterParent/HunterParetn";
+
+import EatApple from "./EatApple/EatApple";
+import Pizza from "./Pizza/Pizza";
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -17,6 +19,7 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode>
   <div>
+    <Pizza />
     <EatApple />
     <HunterParent />
     <Animal title='Pig' description= 'I like Theatre' age={2}/>
