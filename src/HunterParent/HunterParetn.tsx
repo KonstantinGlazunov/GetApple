@@ -9,6 +9,9 @@ export default function HunterParetn():JSX.Element {
     }
   return (
     <div>
+<p> _____________________________________</p>
+<p> Consultation</p>
+<p> _____________________________________</p>
 <Hunter hunter={hunter} /> 
     </div>
   )
