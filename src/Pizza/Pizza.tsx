@@ -1,59 +1,57 @@
-import { useState } from "react";
+import { log } from "console";
+import React, { useState } from "react";
 
 export default function Pizza(): JSX.Element {
-  const [pizzaIngridients, setPizza] = useState<string>("");
-  const [sausage, setSausage] = useState<string>("Add sausage");
-  let pizzaStr: string;
-
-
-  type ingridients = "sausage" | "tomato" | "cheese";
-  type sizeNumber = 1 | 2;
-
+  type Ingredient = "sausage" | "tomato" | "cheese";
   interface PizzaInterface {
-    size: sizeNumber;
-    ingridient: ingridients[];
-    prise: number;
+    ingredients: Ingredient[];
+    size: 1 | 2;
+    price: number;
+  }
+
+  let pizza: PizzaInterface = {
+    ingredients: [],
+    size: 1,
+    price: 0,
   };
 
-  const pizza: PizzaInterface = {
-    size: 2,
-    ingridient: [],
-    prise: 0,
-  };
+  const [pizzaCondition, setPizza] = useState<PizzaInterface>(pizza);
 
-  function pizzaCooking(ingridient:ingridients): void {
-    setPizza(pizzaIngridients + `${ingridient}`);
-pizza.ingridient = [...pizza.ingridient, ingridient]
- 
-}
-
+  /// Не понимаю как мне теперь изменять объект Pizza  //
+  function addIngredient(ing: Ingredient ): void {
+    setPizza((lastChoosePizza) => ({
+      ...lastChoosePizza,
+      ingredients: [...lastChoosePizza.ingredients, ing],
+      price:  lastChoosePizza.price+1
+      
+    }));
+  }
+  function setSize(chooseSize: 1|2 ): void {
+    setPizza((lastChoosePizza) => ({
+      ...lastChoosePizza,
+      size: chooseSize,
+    }));
+  
+  }
 
   return (
     <div>
-         <h2>{pizzaIngridients}</h2> {/*простой вариант */}
-
-      <h2>{pizza.ingridient.map((ingridient, index)=>
-      (ingridient)
-      )}{pizza.size} {pizza.prise}</h2>
-      <button
-         type="button"
-        onClick={()=>pizzaCooking("sausage")}
-      >
+      <div>
+        Make pizza: {pizzaCondition.ingredients.join(", ")}  size: {pizzaCondition.size} 
+         Price: {pizzaCondition.price}
+      </div>
+      <button type="button" onClick={() => addIngredient("sausage")}>
         Add sausage
       </button>
-      <button
-         type="button"
-        onClick={()=>pizzaCooking("tomato")}
-      >
+      <button type="button" onClick={() => addIngredient("tomato")}>
         Add tomato
       </button>
-      <button
-         type="button"
-        onClick={()=>pizzaCooking("cheese")}
-      >
+      <button type="button" onClick={() => addIngredient("cheese")}>
         Add cheese
       </button>
- 
+      <button type="button" onClick={() => setSize(2)}>
+        size 2
+      </button>
     </div>
   );
 }

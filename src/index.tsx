@@ -9,6 +9,7 @@ import Animal from "./Animal/Animal";
 import HunterParent from "./HunterParent/HunterParetn";
 
 import EatApple from "./EatApple/EatApple";
+import Pizza0 from "./Pizza0/Pizza0";
 import Pizza from "./Pizza/Pizza";
 
 
@@ -20,14 +21,16 @@ root.render(
   //<React.StrictMode>
   <div>
     <Pizza />
+    <p>____________________________________</p>
+    <Pizza0 />
     <EatApple />
     <HunterParent />
     <Animal title='Pig' description= 'I like Theatre' age={2}/>
     <Animal title='Lion' description='I like to walk' age={5}/>
     
     <Counter />
-    <Msg />
-    <App />
+    <Msg msg="everybody" title="!!!" />
+    {/* <App /> */}
   </div>
   //</React.StrictMode>
 );

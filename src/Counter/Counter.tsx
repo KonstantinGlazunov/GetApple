@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Msg from "../Msg/Msg";
 
 export default function Counter():JSX.Element{
     
@@ -11,8 +12,10 @@ export default function Counter():JSX.Element{
 
     return(
         <>
+        <p>___________________Counter _________________</p>
             <button type="button"  onClick = {add} >Click Me!</button>
-            <h2>Counter value: {counter}</h2>    
+            <h2>Counter value: {counter}</h2>   
+            <Msg msg="Counter" title={counter==12? "Yes" : "Hallo"} />  
         </>
     )
 
