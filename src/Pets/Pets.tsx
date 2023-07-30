@@ -3,7 +3,7 @@
 компонент PetRecord передавая необходимые параметры. 
 */
 import React from 'react'
-import PetRecord from '../PetRecord/PetRecord'
+import PetRecord, { PetsProps } from '../PetRecord/PetRecord'
 
 export default function Pets(): JSX.Element {
     /*interface Pet{
@@ -12,23 +12,23 @@ export default function Pets(): JSX.Element {
             additionalInfo: string,
             displayInfo: boolean,
           };*/
-          let cat ={ // не понял как сюда передать type PetsProps ?
+          const cat: PetsProps ={ 
             id: 2,
             petName: "Murka",
             additionalInfo: "black and white",
             displayInfo: true,
           }
-          let lion ={ 
+          const lion ={ 
             id: 3,
             petName: "Simba",
             additionalInfo: "Live in Afrika",
             displayInfo: true,
           }
-          let pinguin ={ 
-            id: 3,
+          const pinguin ={ 
+            id: 4,
             petName: "Komandor",
             additionalInfo: "Live in Madagaskar",
-            displayInfo: true,
+            displayInfo: false,
           }
 
   return (

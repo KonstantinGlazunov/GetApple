@@ -1,3 +1,4 @@
+import { switchCase } from "@babel/types";
 import { log } from "console";
 import React, { useState } from "react";
 
@@ -5,51 +6,73 @@ export default function Pizza(): JSX.Element {
   type Ingredient = "sausage" | "tomato" | "cheese";
   interface PizzaInterface {
     ingredients: Ingredient[];
-    size: 1 | 2;
+    size: "big" | "small";
     price: number;
   }
 
-  let pizza: PizzaInterface = {
+  let defaultPizza: PizzaInterface = {
     ingredients: [],
-    size: 1,
-    price: 0,
+    size: "big",
+    price: 6,
   };
 
-  const [pizzaCondition, setPizza] = useState<PizzaInterface>(pizza);
+  const [pizzaCondition, setPizza] = useState<PizzaInterface>(defaultPizza);
 
-  function addIngredient(ing: Ingredient ): void {
+  function addIngredient(ing: Ingredient): void {
+    let addPrice = 0;
+    switch (ing) {
+        case "sausage":
+            addPrice = 3;
+            break;
+            case "cheese":
+                addPrice = 2;
+                break;
+                case "tomato":
+            addPrice = 1;
+            break;
+    }
     setPizza((lastChoosePizza) => ({
       ...lastChoosePizza,
       ingredients: [...lastChoosePizza.ingredients, ing],
-      price:  lastChoosePizza.price+1
-      
+      price: lastChoosePizza.price + addPrice,
     }));
   }
-  function setSize(chooseSize: 1|2 ): void {
+  function setSize(): void {
     setPizza((lastChoosePizza) => ({
       ...lastChoosePizza,
-      size: chooseSize,
+      size: lastChoosePizza.size === "small" ? "big" : "small",
+      price:
+        lastChoosePizza.size === "small"
+          ? lastChoosePizza.price * 2
+          : lastChoosePizza.price / 2,
     }));
-  
+  }
+  function clear():void {
+    setPizza(()=>(
+        {...defaultPizza,}
+    ))
   }
 
   return (
     <div>
       <div>
-        Make pizza: {pizzaCondition.ingredients.join(", ")}  size: {pizzaCondition.size} 
-         Price: {pizzaCondition.price}
+        Make pizza: size: {pizzaCondition.size} Price: {pizzaCondition.price}{" "}
+        Ingridients: {pizzaCondition.ingredients.join(", ")}
       </div>
       <button type="button" onClick={() => addIngredient("sausage")}>
         Add sausage
       </button>
-      <button type="button" onClick={() => addIngredient("tomato")}>
-        Add tomato
-      </button>
       <button type="button" onClick={() => addIngredient("cheese")}>
         Add cheese
       </button>
-      <button type="button" onClick={() => setSize(2)}>
-        size 2
+      <button type="button" onClick={() => addIngredient("tomato")}>
+        Add tomato
+      </button>
+      <button type="button" onClick={() => setSize()}>
+        size
+      </button>
+      <button type="button" onClick={() => clear()}>
+        Clear
       </button>
     </div>
   );

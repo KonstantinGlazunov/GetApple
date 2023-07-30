@@ -10,7 +10,7 @@
 компонент PetRecord передавая необходимые параметры. 
 */
 import React from "react";
-type PetsProps= {
+export type PetsProps= {
   id: number,
   petName: string,
   additionalInfo: string,
