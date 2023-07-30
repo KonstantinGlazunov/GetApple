@@ -6,32 +6,27 @@
 Причем, дополнительная информация должна отображаться, только если dysplayInfo ==true
  
 2)
-Создайте компонент, в котором создайте 3 объекта Petи для каждого из них вызовете 
+Создайте компонент, в котором создайте 3 объекта Pet и для каждого из них вызовете 
 компонент PetRecord передавая необходимые параметры. 
 */
 import React from "react";
-type Props= {
+type PetsProps= {
   id: number,
   petName: string,
   additionalInfo: string,
-  dysplayInfo: boolean,
+  displayInfo: boolean,
 };
 
-export default function PetRecord(p:Props
+export default function PetRecord(p:PetsProps
 ): JSX.Element {
  
-  
-
-  let {id , petName, additionalInfo, dysplayInfo} = p;
-
-if (dysplayInfo) {}
-
+  let {id , petName, additionalInfo,  displayInfo} = p;
   return <div>
     <p>
     ## {petName.toUpperCase()}
     </p>
     <p>
-   {dysplayInfo? additionalInfo: ""}   
+   {displayInfo? additionalInfo: ""}   
     </p>
   </div>;
 }
