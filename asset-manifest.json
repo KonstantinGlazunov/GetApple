@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/GetApple/static/css/main.a1052dc1.css",
+    "main.js": "/GetApple/static/js/main.d50f1dba.js",
+    "static/js/787.65f0048f.chunk.js": "/GetApple/static/js/787.65f0048f.chunk.js",
+    "static/media/GettyImages-678870071-jpg": "/GetApple/static/media/GettyImages-678870071-7c3e8e7fc4c94654bac8defba2744b3c.f2fe5eca8fe25e281346.jpg",
+    "index.html": "/GetApple/index.html",
+    "main.a1052dc1.css.map": "/GetApple/static/css/main.a1052dc1.css.map",
+    "main.d50f1dba.js.map": "/GetApple/static/js/main.d50f1dba.js.map",
+    "787.65f0048f.chunk.js.map": "/GetApple/static/js/787.65f0048f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1052dc1.css",
+    "static/js/main.d50f1dba.js"
+  ]
+}
