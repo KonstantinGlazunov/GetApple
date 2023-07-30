@@ -11,6 +11,7 @@ import HunterParent from "./HunterParent/HunterParetn";
 import EatApple from "./EatApple/EatApple";
 import Pizza0 from "./Pizza0/Pizza0";
 import Pizza from "./Pizza/Pizza";
+import PetRecord from "./PetRecord/PetRecord";
 
 
 
@@ -20,6 +21,10 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode>
   <div>
+    <PetRecord  id={1} petName= "Dic"
+  additionalInfo= "dog"
+  dysplayInfo= {true} />
+    <p>____________________________________</p>
     <Pizza />
     <p>____________________________________</p>
     <Pizza0 />

@@ -17,7 +17,6 @@ export default function Pizza(): JSX.Element {
 
   const [pizzaCondition, setPizza] = useState<PizzaInterface>(pizza);
 
-  /// Не понимаю как мне теперь изменять объект Pizza  //
   function addIngredient(ing: Ingredient ): void {
     setPizza((lastChoosePizza) => ({
       ...lastChoosePizza,

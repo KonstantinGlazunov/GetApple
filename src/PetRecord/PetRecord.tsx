@@ -9,12 +9,29 @@
 Создайте компонент, в котором создайте 3 объекта Petи для каждого из них вызовете 
 компонент PetRecord передавая необходимые параметры. 
 */
-import React from 'react'
-export default function PetRecord(): JSX.Element {
+import React from "react";
+type Props= {
+  id: number,
+  petName: string,
+  additionalInfo: string,
+  dysplayInfo: boolean,
+};
+
+export default function PetRecord(p:Props
+): JSX.Element {
+ 
   
-  
-  
-    return (
-    <div>PetRecord</div>
-  )
+
+  let {id , petName, additionalInfo, dysplayInfo} = p;
+
+if (dysplayInfo) {}
+
+  return <div>
+    <p>
+    ## {petName.toUpperCase()}
+    </p>
+    <p>
+   {dysplayInfo? additionalInfo: ""}   
+    </p>
+  </div>;
 }
