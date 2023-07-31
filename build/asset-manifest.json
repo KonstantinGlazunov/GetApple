@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.a1052dc1.css",
-    "main.js": "./static/js/main.da0035d4.js",
-    "static/js/787.65f0048f.chunk.js": "./static/js/787.65f0048f.chunk.js",
-    "static/media/GettyImages-678870071-jpg": "./static/media/GettyImages-678870071-7c3e8e7fc4c94654bac8defba2744b3c.f2fe5eca8fe25e281346.jpg",
-    "index.html": "./index.html",
-    "main.a1052dc1.css.map": "./static/css/main.a1052dc1.css.map",
-    "main.da0035d4.js.map": "./static/js/main.da0035d4.js.map",
-    "787.65f0048f.chunk.js.map": "./static/js/787.65f0048f.chunk.js.map"
+    "main.css": "/GetApple/static/css/main.2495fe6f.css",
+    "main.js": "/GetApple/static/js/main.93af5063.js",
+    "static/js/787.65f0048f.chunk.js": "/GetApple/static/js/787.65f0048f.chunk.js",
+    "static/media/GettyImages-678870071-jpg": "/GetApple/static/media/GettyImages-678870071-7c3e8e7fc4c94654bac8defba2744b3c.f2fe5eca8fe25e281346.jpg",
+    "static/media/p.gif": "/GetApple/static/media/p.5e68a1e5a5fc6a4b4b1b.gif",
+    "index.html": "/GetApple/index.html",
+    "main.2495fe6f.css.map": "/GetApple/static/css/main.2495fe6f.css.map",
+    "main.93af5063.js.map": "/GetApple/static/js/main.93af5063.js.map",
+    "787.65f0048f.chunk.js.map": "/GetApple/static/js/787.65f0048f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1052dc1.css",
-    "static/js/main.da0035d4.js"
+    "static/css/main.2495fe6f.css",
+    "static/js/main.93af5063.js"
   ]
 }

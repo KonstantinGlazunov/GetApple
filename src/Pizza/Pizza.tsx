@@ -1,6 +1,8 @@
 import { switchCase } from "@babel/types";
 import { log } from "console";
 import React, { useState } from "react";
+import P from './p.gif'
+
 
 export default function Pizza(): JSX.Element {
   type Ingredient = "sausage" | "tomato" | "cheese";
@@ -8,12 +10,14 @@ export default function Pizza(): JSX.Element {
     ingredients: Ingredient[];
     size: "big" | "small";
     price: number;
+    picture: string
   }
 
   let defaultPizza: PizzaInterface = {
     ingredients: [],
     size: "big",
     price: 6,
+    picture: P,
   };
 
   const [pizzaCondition, setPizza] = useState<PizzaInterface>(defaultPizza);
@@ -36,6 +40,7 @@ export default function Pizza(): JSX.Element {
       ingredients: [...lastChoosePizza.ingredients, ing],
       price: lastChoosePizza.price + addPrice,
     }));
+
   }
   function setSize(): void {
     setPizza((lastChoosePizza) => ({
@@ -55,8 +60,10 @@ export default function Pizza(): JSX.Element {
 
   return (
     <div>
+        <div> Make your pizza</div>
+        <img  className="pizzaPicture" src={pizzaCondition.picture} alt='pizza'/>
       <div>
-        Make pizza: size: {pizzaCondition.size} Price: {pizzaCondition.price}{" "}
+        Make your pizza: size: {pizzaCondition.size} Price: {pizzaCondition.price}{" "}
         Ingridients: {pizzaCondition.ingredients.join(", ")}
       </div>
       <button type="button" onClick={() => addIngredient("sausage")}>

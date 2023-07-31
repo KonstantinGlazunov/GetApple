@@ -1,7 +1,7 @@
 {
-  "homepage": "./",
   "name": "hw20-app",
   "version": "0.1.0",
+  "homepage":  "https://KonstantinGlazunov.github.io/GetApple",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

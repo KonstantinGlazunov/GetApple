@@ -13,6 +13,10 @@ import Pizza0 from "./Pizza0/Pizza0";
 import Pizza from "./Pizza/Pizza";
 import PetRecord from "./PetRecord/PetRecord";
 import Pets from "./Pets/Pets";
+import PetProcessing from "./PetProcessing/PetProcessing";
+import DogCard from "./DogCard/DogCard";
+import Consultation from "./Consultation/Consultation";
+import Activity from "./Activity/Activity";
 
 
 const root = ReactDOM.createRoot(
@@ -21,6 +25,15 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode>
   <div>
+<p>_________________Activity_______________________</p>
+<Activity />
+    <p>_____________________________________
+      <Consultation />
+    </p>
+    <p>_________________DogCard_____________________</p>
+    <DogCard />
+    <p>_______________PetProcessing</p>
+    <PetProcessing></PetProcessing>
     <p>*PetRecord___________________________</p>
   <Pets />
     <p>______________________________</p>
