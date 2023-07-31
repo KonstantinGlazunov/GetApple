@@ -16,7 +16,7 @@ export default function Activity(): JSX.Element {
   //так и не могу понять зачем это нужно.  Без него работает. ...
   useEffect(() => {
     getActivity();
-  }, [actualActivity]);
+  }, []);
 // почему {getActivity}  без скобок это же функция!? 
   return <div>
     {actualActivity}
