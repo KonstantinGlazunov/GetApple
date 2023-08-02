@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/GetApple/static/css/main.2495fe6f.css",
-    "main.js": "/GetApple/static/js/main.2f5dd24c.js",
+    "main.css": "/GetApple/static/css/main.29c4a719.css",
+    "main.js": "/GetApple/static/js/main.74f5fb00.js",
     "static/js/787.65f0048f.chunk.js": "/GetApple/static/js/787.65f0048f.chunk.js",
-    "static/media/GettyImages-678870071-jpg": "/GetApple/static/media/GettyImages-678870071-7c3e8e7fc4c94654bac8defba2744b3c.f2fe5eca8fe25e281346.jpg",
+    "static/media/p_ch_tom_sa.gif": "/GetApple/static/media/p_ch_tom_sa.304674b43ad9b291adb6.gif",
+    "static/media/p_sa_tom.gif": "/GetApple/static/media/p_sa_tom.43d4ebea75e002b233b7.gif",
+    "static/media/p_ch_sa.gif": "/GetApple/static/media/p_ch_sa.0d334da721936d9f99fd.gif",
+    "static/media/p_ch_tom.gif": "/GetApple/static/media/p_ch_tom.9c46b917b97345c6926d.gif",
+    "static/media/p_sa.gif": "/GetApple/static/media/p_sa.3e7782e49beb8ca2ed15.gif",
+    "static/media/p_tom.gif": "/GetApple/static/media/p_tom.0c45afc0a23cc3c9a391.gif",
+    "static/media/p_ch.gif": "/GetApple/static/media/p_ch.e024070bf5865b2d9660.gif",
     "static/media/p.gif": "/GetApple/static/media/p.5e68a1e5a5fc6a4b4b1b.gif",
     "index.html": "/GetApple/index.html",
-    "main.2495fe6f.css.map": "/GetApple/static/css/main.2495fe6f.css.map",
-    "main.2f5dd24c.js.map": "/GetApple/static/js/main.2f5dd24c.js.map",
+    "main.29c4a719.css.map": "/GetApple/static/css/main.29c4a719.css.map",
+    "main.74f5fb00.js.map": "/GetApple/static/js/main.74f5fb00.js.map",
     "787.65f0048f.chunk.js.map": "/GetApple/static/js/787.65f0048f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2495fe6f.css",
-    "static/js/main.2f5dd24c.js"
+    "static/css/main.29c4a719.css",
+    "static/js/main.74f5fb00.js"
   ]
 }

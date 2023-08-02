@@ -1,0 +1,16 @@
+
+.button {
+    
+    margin: 5px;
+    color:bisque;
+    background-color: chocolate;
+    font-size: 15px;
+    border-bottom: 3px;
+    border-radius: 4px;
+}
+.big {
+    width: 300px;
+}
+.small{
+    width: 200px
+}

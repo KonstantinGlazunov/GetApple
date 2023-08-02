@@ -17,7 +17,8 @@ import PetProcessing from "./PetProcessing/PetProcessing";
 import DogCard from "./DogCard/DogCard";
 import Consultation from "./Consultation/Consultation";
 import Activity from "./Activity/Activity";
-
+import MyApp from "./MyApp/MyApp"
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,34 +26,10 @@ const root = ReactDOM.createRoot(
 root.render(
   //<React.StrictMode>
   <div>
-<p>_________________Activity_______________________</p>
-<Activity />
-    <p>_____________________________________
-      <Consultation />
-    </p>
-    <p>_________________DogCard_____________________</p>
-    <DogCard />
-    <p>_______________PetProcessing</p>
-    <PetProcessing></PetProcessing>
-    <p>*PetRecord___________________________</p>
-  <Pets />
-    <p>______________________________</p>
-    <p>PetRecord</p>
-    <PetRecord  id={1} petName= "Dic"
-  additionalInfo= "dog"
-  displayInfo= {true} />
-    <p>____________________________________</p>
     <Pizza />
-    <p>____________________________________</p>
-    <Pizza0 />
-    <EatApple />
-    <HunterParent />
-    <Animal title='Pig' description= 'I like Theatre' age={2}/>
-    <Animal title='Lion' description='I like to walk' age={5}/>
-    
-    <Counter />
-    <Msg msg="everybody" title="!!!" />
-    {/* <App /> */}
+    {/* <BrowserRouter>
+<MyApp />
+    </BrowserRouter> */}
   </div>
   //</React.StrictMode>
 );
